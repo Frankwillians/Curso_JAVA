@@ -16,8 +16,7 @@ public class alturas {
         double[] vect = new double[n];
         String[] vectNames = new String[n];
         double sum_height = 0.0;
-        int young = 0;
-        double percent_young = (young / n) * 100;
+        double young = 0;
         for (int i = 0 ; i < vect.length ; i++){
             System.out.printf("Dados da %d ° pessoa: ", i+1);
             System.out.println();
@@ -31,7 +30,7 @@ public class alturas {
             pessoa = new Pessoa(name,idade,altura);
             sum_height += pessoa.getHeight();
             if (pessoa.getAge() < 16){
-                young = young + 1;
+                young+=1;
                 vectNames[i] = pessoa.getName();
 
 
@@ -40,12 +39,11 @@ public class alturas {
 
         }
 
-
-        System.out.println(young);
+        double percent_young = (young / n) * 100;
         double height_avg = sum_height / vect.length;
         System.out.print("Altura media: " + String.format("%.2f",height_avg));
         System.out.println();
-        System.out.print("Pessoas com menos de 16 anos: " + percent_young + "%");
+        System.out.print("Pessoas com menos de 16 anos: " + String.format("%.2f", percent_young)+ "%");
         System.out.println();
         for(int i = 0 ; i < n ; i++){
            
