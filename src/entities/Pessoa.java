@@ -4,6 +4,8 @@ public class Pessoa {
     private String name;
     private int age;
     private double height;
+    private String genero;
+
     
     
     
@@ -16,6 +18,13 @@ public class Pessoa {
     public Pessoa(String name, int age) {
         this.name = name;
         this.age = age;
+       
+    }
+
+    public Pessoa( double height,String genero) {
+        this.height = height;
+        this.genero = genero;
+        
        
     }
 
@@ -37,4 +46,13 @@ public class Pessoa {
     public void setHeight(double height) {
         this.height = height;
     }
+
+    public String getGenero() {
+        return genero;
+    }
+
+    public void setGenero(String genero) {
+        this.genero = genero;
+    }
+
 }
