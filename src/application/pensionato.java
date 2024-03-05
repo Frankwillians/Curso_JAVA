@@ -11,7 +11,6 @@ public class pensionato {
     inquilinos[] inquilinos = new inquilinos[10]; 
     System.out.print("How many rooms will be rented? ");
     int quant = sc.nextInt();
-    int posi = 0;
 
     for (int i = 0 ; i < quant ; i++){
         sc.nextLine();
@@ -21,28 +20,22 @@ public class pensionato {
         String email = sc.nextLine(); 
         System.out.print("Room Number: ");
         int room = sc.nextInt();
-        if (room == i+1){
-            inquilinos[room] = new inquilinos(name, email);
-            posi++;
-        }
-     
+        inquilinos[room] = new inquilinos(name, email);
+      
         
       
     }
 
     System.out.println("Busy rooms: ");
 
-    for (int i = 0 ; i < quant ; i++){
+    for (int i = 0 ; i < inquilinos.length ; i++){
         if(inquilinos[i] != null){
-            System.out.println(inquilinos[posi-1].getName());
-            System.out.println(inquilinos[posi-1].getEmail());
-            System.out.println(posi);
+            System.out.println(i+": " + inquilinos[i].getName()+ ", " + inquilinos[i].getEmail());
+    
         }
 
     }
-  
-    
-    System.out.println(posi);
+   
     
     
     sc.close();
