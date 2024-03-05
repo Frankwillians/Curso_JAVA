@@ -21,12 +21,14 @@ public class pensionato {
         System.out.print("Room Number: ");
         int room = sc.nextInt();
         inquilinos[room] = new inquilinos(name, email);
+        System.out.println();
       
         
       
     }
-
+    
     System.out.println("Busy rooms: ");
+    System.out.println();
 
     for (int i = 0 ; i < inquilinos.length ; i++){
         if(inquilinos[i] != null){
