@@ -15,8 +15,11 @@ public class pensionato {
 
     for (int i = 0 ; i < quant ; i++){
         sc.nextLine();
+        System.out.print("Name: ");
         String name = sc.nextLine();
+        System.out.print("Email: ");
         String email = sc.nextLine(); 
+        System.out.print("Room Number: ");
         int room = sc.nextInt();
         if (room == i+1){
             inquilinos[room] = new inquilinos(name, email);
