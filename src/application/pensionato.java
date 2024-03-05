@@ -14,6 +14,7 @@ public class pensionato {
 
     for (int i = 0 ; i < quant ; i++){
         sc.nextLine();
+        System.out.println("RENT #" + (i+1) + ";");
         System.out.print("Name: ");
         String name = sc.nextLine();
         System.out.print("Email: ");
