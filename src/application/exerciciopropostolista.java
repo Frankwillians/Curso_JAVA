@@ -31,26 +31,36 @@ public class exerciciopropostolista {
             double sal = sc.nextDouble();
             
             employee.add(new Employee2(ident, namer,sal));
+            System.out.println();
 
           
             
         }
-
+        System.out.println();
         System.out.print("Enter the id of the employee that will have a salary increase: ");
         int ident = sc.nextInt();
         System.out.println();
-       
-        if (ident != employee.indexOf(ident)){
-        
-            System.out.println("This ID not exist!");
+        String msg = "";
+        for (Employee2 x : employee) {
+            if (ident == x.getId()){
+                System.out.print("Enter the percentage: ");
+                Integer perc = sc.nextInt();
+                x.salaryIncrease(perc);
+                
+            
             
             
             
         }
-        else {
+            else if (ident != employee.indexOf(x)){
+                System.out.println("thid id not exist");
         
-            System.out.print("Enter the percentage: ");
+            
+
         }
+       }
+    
+        
 
         System.out.println("List of employees: ");
        
