@@ -19,7 +19,7 @@ public class exerciciopropostolista {
         for (int i = 0 ; i < n ; i++){
             System.out.println("Employee #" + (i+1));
             System.out.print("ID: ");
-            int ident = sc.nextInt();
+            int id = sc.nextInt();
             
 
             sc.nextLine();
@@ -30,7 +30,7 @@ public class exerciciopropostolista {
             System.out.print("Salary: ");
             double sal = sc.nextDouble();
             
-            employee.add(new Employee2(ident, namer,sal));
+            employee.add(new Employee2(id, namer,sal));
             System.out.println();
 
           
@@ -38,29 +38,25 @@ public class exerciciopropostolista {
         }
         System.out.println();
         System.out.print("Enter the id of the employee that will have a salary increase: ");
-        int ident = sc.nextInt();
-        System.out.println();
-        String msg = "";
+        Integer id = sc.nextInt();
+        
+        
+        boolean find = false;
         for (Employee2 x : employee) {
-            if (ident == x.getId()){
+            
+            if (x.getId() == id){ 
                 System.out.print("Enter the percentage: ");
                 Integer perc = sc.nextInt();
                 x.salaryIncrease(perc);
-                
-            
-            
-            
+                find = true;
+            }
             
         }
-            else if (ident != employee.indexOf(x)){
-                System.out.println("thid id not exist");
-        
-            
+        if (find != true) {
+            System.out.println("This ID Not Exist!");
+        }
 
-        }
-       }
-    
-        
+        System.out.println();
 
         System.out.println("List of employees: ");
        
