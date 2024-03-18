@@ -8,7 +8,7 @@ public class exerciciomatriz {
         int n = sc.nextInt();
         int m = sc.nextInt();
         int[][] mat = new int[n][m];
-        int num = sc.nextInt();
+      
         for (int i = 0; i < mat.length; i++){
             for(int j = 0; j < mat[i].length; j++){
                 mat[i][j] = sc.nextInt();
@@ -33,9 +33,10 @@ public class exerciciomatriz {
                     System.out.println("Down: " + mat[i+1][j]);
                 }
                
-            }
+            
         }
         
         sc.close();
     }
+}
 }
