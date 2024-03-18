@@ -2,17 +2,17 @@ package entities;
 
 import java.util.Date;
 
-import entities.enums.OrderStatus;
+import entities.enums.OrderStatusex;
 
-public class Order {
+public class Orderex {
     private Integer id;
     private Date moment;
-    private OrderStatus status;
+    private OrderStatusex status;
     
-    public Order(){
+    public Orderex(){
     }
     
-    public Order(Integer id, Date moment, OrderStatus status) {
+    public Orderex(Integer id, Date moment, OrderStatusex status) {
         this.id = id;
         this.moment = moment;
         this.status = status;
@@ -34,11 +34,11 @@ public class Order {
         this.moment = moment;
     }
 
-    public OrderStatus getStatus() {
+    public OrderStatusex getStatus() {
         return status;
     }
 
-    public void setStatus(OrderStatus status) {
+    public void setStatus(OrderStatusex status) {
         this.status = status;
     }
 

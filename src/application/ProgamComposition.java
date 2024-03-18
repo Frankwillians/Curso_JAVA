@@ -7,9 +7,9 @@ import java.util.Locale;
 import java.util.Scanner;
 
 import entities.Department;
-import entities.HourContract;
-import entities.Worker;
-import entities.enums.WorkerLevel;
+import entities.HourContractex;
+import entities.Workerex;
+import entities.enums.WorkerLevelex;
 
 public class ProgamComposition {
     public static void main(String[] args) throws ParseException {
@@ -27,7 +27,7 @@ public class ProgamComposition {
         System.out.print("Base salary: ");
         double baseSalary = sc.nextDouble();
         
-        Worker worker = new Worker(workerName, WorkerLevel.valueOf(workerLevel),baseSalary,new Department(departmentName));
+        Workerex worker = new Workerex(workerName, WorkerLevelex.valueOf(workerLevel),baseSalary,new Department(departmentName));
         System.out.print("How many contracts to this worker? ");
         int n = sc.nextInt();
 
@@ -39,7 +39,7 @@ public class ProgamComposition {
             double valuePerHour = sc.nextDouble();
             System.out.print("Duration (hours): ");
             int hours = sc.nextInt();
-            HourContract contract = new HourContract(contractDate, valuePerHour, hours);
+            HourContractex contract = new HourContractex(contractDate, valuePerHour, hours);
             worker.addContract(contract);
 
         }

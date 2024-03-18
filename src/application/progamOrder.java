@@ -2,18 +2,18 @@ package application;
 
 import java.util.Date;
 
-import entities.Order;
-import entities.enums.OrderStatus;
+import entities.Orderex;
+import entities.enums.OrderStatusex;
 
 public class progamOrder {
     public static void main(String[] args) {
-        Order order = new Order(1080, new Date(), OrderStatus.PENDING_PAYMENT);
+        Orderex order = new Orderex(1080, new Date(), OrderStatusex.PENDING_PAYMENT);
     
     
         System.out.println(order);
 
-        OrderStatus os1 = OrderStatus.DELIVERED;
-        OrderStatus os2 = OrderStatus.valueOf("DELIVERED");
+        OrderStatusex os1 = OrderStatusex.DELIVERED;
+        OrderStatusex os2 = OrderStatusex.valueOf("DELIVERED");
 
         System.out.println(os1);
         System.out.println(os2);

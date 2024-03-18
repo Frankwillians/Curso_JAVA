@@ -4,21 +4,21 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
-import entities.enums.WorkerLevel;
+import entities.enums.WorkerLevelex;
 
-public class Worker {
+public class Workerex {
     private String name;
-    private WorkerLevel level;
+    private WorkerLevelex level;
     private Double baseSalary;
 
     private Department department;
-    private List<HourContract> contracts = new ArrayList<>();
+    private List<HourContractex> contracts = new ArrayList<>();
 
-    public Worker(){
+    public Workerex(){
 
     }
 
-    public Worker(String name, WorkerLevel level, Double baseSalary, Department department) {
+    public Workerex(String name, WorkerLevelex level, Double baseSalary, Department department) {
         this.name = name;
         this.level = level;
         this.baseSalary = baseSalary;
@@ -33,11 +33,11 @@ public class Worker {
         this.name = name;
     }
 
-    public WorkerLevel getLevel() {
+    public WorkerLevelex getLevel() {
         return level;
     }
 
-    public void setLevel(WorkerLevel level) {
+    public void setLevel(WorkerLevelex level) {
         this.level = level;
     }
 
@@ -57,15 +57,15 @@ public class Worker {
         this.department = department;
     }
 
-    public List<HourContract> getContracts() {
+    public List<HourContractex> getContracts() {
         return contracts;
     }
 
     
-    public void addContract(HourContract contract){
+    public void addContract(HourContractex contract){
         contracts.add(contract);
     }
-    public void removeContract (HourContract contract){
+    public void removeContract (HourContractex contract){
         contracts.remove(contract);
     }
 
@@ -73,7 +73,7 @@ public class Worker {
         double sum = baseSalary;
          //pegar partes especificas da data
         Calendar cal = Calendar.getInstance();
-        for(HourContract c : contracts){
+        for(HourContractex c : contracts){
            //pegar partes especificas da data
             cal.setTime(c.getDate());
             int c_year =  cal.get(Calendar.YEAR);
