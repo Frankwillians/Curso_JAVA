@@ -3,17 +3,17 @@ package application;
 import java.util.Date;
 
 import entities.Orderex;
-import entities.enums.OrderStatusex;
+import entities.enums.OrderStatus;
 
 public class progamOrder {
     public static void main(String[] args) {
-        Orderex order = new Orderex(1080, new Date(), OrderStatusex.PENDING_PAYMENT);
+        Orderex order = new Orderex(1080, new Date(), OrderStatus.PENDING_PAYMENT);
     
     
         System.out.println(order);
 
-        OrderStatusex os1 = OrderStatusex.DELIVERED;
-        OrderStatusex os2 = OrderStatusex.valueOf("DELIVERED");
+        OrderStatus os1 = OrderStatus.DELIVERED;
+        OrderStatus os2 = OrderStatus.valueOf("DELIVERED");
 
         System.out.println(os1);
         System.out.println(os2);
